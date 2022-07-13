@@ -4,14 +4,14 @@ import java.util.Objects;
 
 public class Gato {
     private String nome;
-    private String car;
-    private String idade;
+    private String cor;
+    private Integer idade;
 
     public Gato() {}
 
-    public Gato(String nome, String car, String idade) {
+    public Gato(String nome, String cor, Integer idade) {
         this.nome = nome;
-        this.car = car;
+        this.cor = cor;
         this.idade = idade;
     }
 
@@ -23,19 +23,19 @@ public class Gato {
         this.nome = nome;
     }
 
-    public String getCar() {
-        return car;
+    public String getCor() {
+        return cor;
     }
 
-    public void setCar(String car) {
-        this.car = car;
+    public void setCor(String cor) {
+        this.cor = cor;
     }
 
-    public String getIdade() {
+    public Integer getIdade() {
         return idade;
     }
 
-    public void setIdade(String idade) {
+    public void setIdade(Integer idade) {
         this.idade = idade;
     }
 
@@ -44,20 +44,22 @@ public class Gato {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Gato gato = (Gato) o;
-        return Objects.equals(nome, gato.nome) && Objects.equals(car, gato.car) && Objects.equals(idade, gato.idade);
+        return Objects.equals(nome, gato.nome) && Objects.equals(cor, gato.cor) && Objects.equals(idade, gato.idade);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(nome, car, idade);
+        return Objects.hash(nome, cor, idade);
     }
 
     @Override
     public String toString() {
         return "Gato{" +
                 "nome='" + nome + '\'' +
-                ", car='" + car + '\'' +
-                ", idade='" + idade + '\'' +
+                ", cor='" + cor + '\'' +
+                ", idade=" + idade +
                 '}';
     }
 }
+
+
